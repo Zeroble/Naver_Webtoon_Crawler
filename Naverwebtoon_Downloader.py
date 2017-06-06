@@ -71,12 +71,12 @@ try:
     wname = title.get_text().strip().split("\n")  # 제목과 작가이름 받아온 후 분리
     wname[0] = wname[0].replace("\r","")
     wname[1] = wname[1].replace("\t","")
-
+    print("")
 except:
     print("아무래도 URL에 문제가 있는 것 같습니다.\n확인 해 주세요.\n")
     exit(1)
 
-print("웹툰 : {1}\n작가 : {2}\n[1 ~ {0}]\n\n1화부터 {0}화까지 검색되었습니다.\n".format(curFire[3], wname[0], wname[1]))
+print("웹툰 : {1} [1 ~ {0}]\n작가 : {2}\n\n1화부터 {0}화까지 검색되었습니다.\n".format(curFire[3], wname[0], wname[1]))
 print("다운로드를 시작할 화를 입력 해 주세요 : ", end="")
 try:
     startFire = int(input())
