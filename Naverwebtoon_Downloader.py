@@ -68,7 +68,9 @@ try:
     curFire = curFire.replace("'","")
     curFire = curFire.split(",")
 
-    wname = title.get_text().strip().replace("\t", "").split()  # 제목과 작가이름 받아온 후 분리
+    wname = title.get_text().strip().split("\n")  # 제목과 작가이름 받아온 후 분리
+    wname[1] = wname[1].replace("\t","")
+
 except:
     print("아무래도 URL에 문제가 있는 것 같습니다.\n확인 해 주세요.\n")
     exit(1)
