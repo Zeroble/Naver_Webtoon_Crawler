@@ -69,6 +69,7 @@ try:
     curFire = curFire.split(",")
 
     wname = title.get_text().strip().split("\n")  # 제목과 작가이름 받아온 후 분리
+    wname[0] = wname[0].replace("\r","")
     wname[1] = wname[1].replace("\t","")
 
 except:
